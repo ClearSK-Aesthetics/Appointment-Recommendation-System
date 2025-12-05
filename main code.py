@@ -141,4 +141,22 @@ if st.button("Recommend Clinics"):
 
         except Exception as e:
             st.error(f"An error occurred: {e}")
+        
+footer_html="""
+<style>
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #666666;
+    margin-top: 40px;
+}
+</style>
 
+<div class="footer">
+    © 2025 ClearSK Healthcare Group. All rights reserved.<br>
+    Powered by AI • Appointment Advisor System
+</div>
+"""
+st.markdown(footer_html, unsafe_allow_html=True)
