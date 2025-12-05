@@ -49,7 +49,14 @@ def haversine(lat1, lon1, lat2, lon2):
 
 # Streamlit UI
 st.image("Appointment Advisor.png",width=300)
-
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}     /* hides the hamburger menu */
+    footer {visibility: hidden;}        /* hides the footer */
+    header {visibility: hidden;}        /* hides the top Streamlit header */
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.title("Clinic Appointment Recommender")
 st.write("Find the nearest clinics based on your home and work locations.")
@@ -116,11 +123,11 @@ if st.button("Recommend Clinics"):
 **Distance:** {nearest_work['dist_work']:.2f} km
             """)
 
-            # Show preferences (optional)
+            # Show preferences
             st.markdown("---")
             st.write("### 📋 Your preferences (record only)")
             st.write("**Days selected:**", ", ".join(preferred_days) if preferred_days else "None")
-
+            
             segments = []
             if am:
                 segments.append("AM (11am–2pm)")
