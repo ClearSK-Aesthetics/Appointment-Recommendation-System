@@ -50,7 +50,7 @@ def haversine(lat1, lon1, lat2, lon2):
 # Streamlit UI
 
 st.set_page_config(page_title="Clinic Appointment Recommender", layout="wide")
-col1,col2=st.column([1,5])
+col1,col2=st.columns([1,5])
 
 with col1:
     st.image("Appointment Advisor.png",width=180)
