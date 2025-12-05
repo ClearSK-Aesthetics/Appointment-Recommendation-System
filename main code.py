@@ -48,7 +48,7 @@ def haversine(lat1, lon1, lat2, lon2):
     return 2 * R * math.asin(math.sqrt(a))
 
 # Streamlit UI
-st.image("Appointment Advisor.png",width=300,length=300)
+st.image("Appointment Advisor.png",width=300)
 
 
 st.title("Clinic Appointment Recommender")
