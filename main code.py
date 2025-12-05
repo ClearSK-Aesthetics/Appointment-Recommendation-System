@@ -49,8 +49,26 @@ def haversine(lat1, lon1, lat2, lon2):
 
 # Streamlit UI
 
-st.set_page_config(page_title="Clinic Appointment Recommender", layout="centered")
-st.image("Appointment Advisor.png",width=300)
+st.set_page_config(page_title="Clinic Appointment Recommender", layout="wide")
+col1,col2=st.column([1,5])
+
+with col1:
+    st.image("Appointment Advisor.png",width=180)
+with col2:
+    st.markdown("""
+<style>
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+</style>
+
+<div class="header-container">
+    <img src="branding.png" width="180">
+    <h2>Clinic Appointment Recommender</h2>
+</div>
+""", unsafe_allow_html=True)
 st.title("Clinic Appointment Recommender")
 st.write("Find the nearest clinics based on your home and work locations.")
 
