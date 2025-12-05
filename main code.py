@@ -51,9 +51,11 @@ def haversine(lat1, lon1, lat2, lon2):
 st.image("Appointment Advisor.png",width=300)
 hide_streamlit_style = """
     <style>
-    #MainMenu {visibility: hidden;}     /* hides the hamburger menu */
-    footer {visibility: hidden;}        /* hides the footer */
-    header {visibility: hidden;}        /* hides the top Streamlit header */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}      
+    header {visibility: hidden;} 
+    .css-1dp5vir {display: none !important;}
+    .css-1rs60s {display: none !important;}
     </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
