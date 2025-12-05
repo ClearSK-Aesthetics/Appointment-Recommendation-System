@@ -56,6 +56,7 @@ hide_streamlit_style = """
     header {visibility: hidden;} 
     .css-1dp5vir {display: none !important;}
     .css-1rs60s {display: none !important;}
+    .css-1whx7iy {display: none !important;}
     </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
